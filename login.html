@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<header>
+    <h1>ShopStore</h1>
+    <input type="checkbox" id="menu-btn" class="menu-btn">
+    <label for="menu-btn" class="menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    <div class="nav-links">
+        <ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#products">Products</a></li>
+            <li><a href="login.html">Login adm</a></li>
+        </ul>
+    </div>
+</header>
+
+<body>
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Login</h2>
+            <form action="login.php" method="POST">
+                <div class="input-group">
+                    <label for="">Usuario</label>
+                    <input type="text" name="user" value="">
+                </div>
+                <div class="input-group">
+                    <label for="">Password</label>
+                    <input type="password" name="pass" value="">
+                </div>
+                <button type="submit" class="login-button">Login</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Feria</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Permanent+Marker&family=Poetsen+One&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Shadows+Into+Light&display=swap" rel="stylesheet">   
+</head>
+<body>
+    <header>
+        <h1>ShopStore</h1>
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="login.html">Login adm</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="section about-section" id="home" >
+        <div class="image-container">
+            <img src="./assets/vintage3.jpeg" alt="ropa vintage" class="about-image">
+            <img src="./assets/wave.png" alt="ola" class="wave">   
+        </div>
+        <div class="overlay">
+            <h2>FERIA DE ROPA</h2>
+            <h3> Moda circular</h3>
+        </div>
+    </section>
+
+    <section class="section quote-section" id="about">
+        <div class="column content">
+            <blockquote>
+                <p class="quote p1">Bienvenidos a nuestra Feria de Ropa, el Mercado de Ropa Usada que Marca la Diferencia.</p>
+                <p class="quote p2">Transformamos la moda sostenible en una experiencia emocionante. Explora nuestra amplia selección de ropa de segunda mano, cuidadosamente curada para ofrecerte opciones únicas y con estilo. Desde piezas vintage hasta las últimas tendencias, aquí encontrarás ropa de calidad a precios accesibles.</p>
+                <p class="quote p3">Únete a nosotros en esta feria y descubre la moda consciente que no solo embellece tu guardarropa, sino que también respeta el medio ambiente. ¡No te pierdas la oportunidad de encontrar tu próximo tesoro de moda!</p> 
+            </blockquote>
+        </div>
+    </section>
+    
+    <section class="section card-container" id="products">
+        <div class="column content">
+            <h2 class="section-title">Descubre nuestros productos</h2>
+            <div class="container">
+                <a href="pantalon.php">
+                    <div class="card">
+                        <img src="assets/pantalon.jpeg" alt="Paprika & Onion">
+                        <div class="overlay">Pantalones</div>
+                    </div>
+                </a>
+                <a href="buzo.php">
+                    <div class="card">
+                        <img src="assets/buzo.jpeg" alt="Cocoa & Nibs">
+                        <div class="overlay">Buzos</div>
+                    </div>
+                </a>
+                <a href="campera.php">
+                    <div class="card">
+                        <img src="assets/campera.jpeg" alt="Salt & Pepper">
+                        <div class="overlay">Camperas</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="section footer">
+        <div class="image-container">
+            <img src="./assets/vintage3.jpeg" alt="ropa vintage" class="about-image">
+            <img src="./assets/wave 2.png" alt="ola" class="footer-wave">
+        </div>
+        <div class="footer-overlay">
+            <h2>Gracias por visitar nuestra tienda</h2>
+            <h3>&copy; Moda circular 2024</h3>
+        </div>
+    </footer>
+</body>
+</html>

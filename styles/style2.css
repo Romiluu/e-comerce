@@ -1,0 +1,55 @@
+/* Estilos para el menú desplegable */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    position: relative; /* Necesario para que el submenú se posicione correctamente */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #565553;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #BF7280;
+}
+
+/*  Estilos del menú desplegable en products */
+.dropdown-menu {
+    display: none; /* Oculta el menú por defecto */
+    position: absolute;
+    top: 100%; /* Lo posiciona justo debajo del elemento padre */
+    left: 0;
+    background-color: #ffe5e5;
+    padding: 0;
+    list-style: none;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Asegura que el menú desplegable esté por encima de otros elementos */
+    padding-right: 20px; /* Ajusta el espacio a la derecha */
+}
+
+.dropdown-menu li a {
+    padding: 5px;
+    color: #565553;
+}
+.dropdown-menu li:last-child {
+    padding-bottom: 20px; /* Ajusta el espacio debajo del último elemento */
+}
+.dropdown-menu li a:hover {
+    background-color: #BF7280;
+    color: white;
+}
+
+/* Muestra el menú cuando se pasa el mouse sobre el elemento padre */
+.dropdown:hover .dropdown-menu {
+    display: block;
+} 

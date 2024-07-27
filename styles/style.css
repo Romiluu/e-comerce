@@ -1,0 +1,1226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos generales del header */
+header {
+    background-color: #ffe5e5;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+}
+
+header h1 {
+    margin: 0;
+    color: #BF7280;
+}
+
+.menu-btn {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #BF7280;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+/* Contenedor del menú */
+.nav-links {
+    display: flex;
+    position: relative; /* Asegurar el posicionamiento relativo */
+}
+
+.nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links ul li {
+    margin-left: 20px;
+    position: relative; /* Necesario para el menú desplegable */
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #565553;
+}
+
+.nav-links ul li a:hover {
+    color: #BF7280;
+}
+
+/* Menú hamburguesa */
+.menu-btn:checked ~ .nav-links {
+    display: block;
+    position: absolute;
+    top: 60px; /* Ajusta según la altura del header */
+    right: 0;
+    background-color: #ffe5e5;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-btn:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.menu-btn:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-btn:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Estilos para el menú en pantallas pequeñas */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        display: block;
+        padding: 0;
+    }
+
+    .nav-links ul li {
+        margin: 0;
+    }
+
+    .nav-links ul li a {
+        padding: 15px;
+        display: block;
+    }
+}
+/* --------------------------comienzo section about-------------------------------- */
+.section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 87px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.about-section {
+    min-height: calc(100vh - 90px);
+    position: relative; /* Añadir posición relativa */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Fija la altura de la imagen */
+    overflow: hidden;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%; /* Cambia a 100% para que ocupe todo el contenedor */
+    object-fit: cover;
+    display: block;
+}
+
+.wave {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.about-section .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #BF7280;
+    padding: 40px;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-family:"Poetsen One", sans-serif;
+}
+
+.about-section .overlay h2 {
+    margin: 0;
+    font-size: 4em;
+}
+
+.about-section .overlay h3 {
+    margin: 0;
+    font-size: 2.5em;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 87px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.column {
+    width: 100%;
+    max-width: 1100px;
+}
+
+.about-section {
+    min-height: calc(100vh - 90px);
+    position: relative; /* Añadir posición relativa */
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 800px; /* Fija la altura de la imagen */
+    overflow: hidden;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%; /* Cambia a 100% para que ocupe todo el contenedor */
+    object-fit: cover;
+    display: block;
+}
+
+.wave {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.about-section .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #BF7280;
+    padding: 40px;
+    border-radius: 15px;
+    opacity: 0.8;
+    font-family:"Poetsen One", sans-serif;
+}
+
+.about-section .overlay h2 {
+    margin: 0;
+    font-size: 4em;
+}
+
+.about-section .overlay h3 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Media queries para la sección about */
+@media (max-width: 1200px) {
+    .about-section {
+        min-height: 70vh;
+    }
+    .about-section .overlay h2 {
+        font-size: 3em;
+    }
+    .about-section .overlay h3 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        min-height: 60vh;
+    }
+    .image-container {
+        height: 500px;
+    }
+    .about-section .overlay {
+        padding: 10px;
+    }
+    .about-section .overlay h2 {
+        font-size: 2.3em;
+    }
+    .about-section .overlay h3 {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        min-height: 5vh;
+    }
+    .image-container {
+        height: 250px;
+    }
+    .about-section .overlay {
+        padding: 20px;
+    }
+    .about-section .overlay h2 {
+        font-size: 1.6em;
+    }
+    .about-section .overlay h3 {
+        font-size: 1.2em;
+    }
+}
+
+/* -------------------------------comienzo quote section---------------------------------------- */
+.quote-section {
+    background-color:white;
+    color: #565553;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+}
+blockquote {
+    display: block;
+    margin-block-start: 7em;
+    margin-block-end: 4em;
+    margin-inline-start: 10px;
+    margin-inline-end: 10px;
+}
+.quote {
+    font-size: 2.5rem;
+    font-weight: bold;
+    
+}
+/* Media queries para la sección quote */
+@media (max-width: 1200px) {
+    .quote {
+        font-size: 2rem;
+    }
+    blockquote {
+        margin-block-start: 5em;
+        margin-block-end: 3em;
+    }
+}
+
+@media (max-width: 768px) {
+    .quote {
+        font-size: 1.5rem;
+    }
+    blockquote {
+        margin-block-start: 4em;
+        margin-block-end: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .quote {
+        font-size: 1.2rem;
+    }
+    blockquote {
+        margin-block-start: 3em;
+        margin-block-end: 1em;
+    }
+}
+
+/* -----------------------Comienzo section cards -------------------------*/
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    margin-bottom: 150px;
+    flex-wrap: wrap; /* Para que las tarjetas se acomoden en varias filas si es necesario */
+    justify-content: center; 
+}
+.section-title {
+    color: #BF7280;
+    display: block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    font-weight: 1000;
+    line-height: 1;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    text-align: center; /* Centramos el título */
+}
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Para que las tarjetas se acomoden en varias filas si es necesario */
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 35px; /* Aumentar el padding */
+    width: 100%; /* Ajustar el ancho al 100% del contenedor padre */
+    max-width: 500px; /* Máximo ancho para pantallas grandes */
+    position: relative;
+    transition: transform 0.3s ease-in-out; /* Transición suave */
+    margin-bottom: 20px; /* Espacio inferior para separación entre tarjetas */
+}   
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.card-container .overlay {
+    position: absolute;
+    bottom: 20px; /* editar antes de hacerlo php */
+    left: 50%;  
+    transform: translateX(-50%);
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 5px;
+    font-weight: bold;
+    font-size: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #000000; 
+}
+.container a {
+    text-decoration: none;
+    color: #565553;
+    font-family:"Poetsen One", sans-serif;
+    font-size: 1.2em;
+}
+
+.container a:hover {
+    color:#BF7280;
+}
+
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .section-title {
+        font-size: 40px; /* Disminuir tamaño de la fuente */
+    }
+    .card {
+        padding: 40px; /* Disminuir padding */
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 35px; /* Disminuir tamaño de la fuente */
+    }
+    .card {
+        padding: 100px; /* Disminuir padding */
+        max-width: 100%; /* Asegurar que el ancho máximo sea 100% */
+    }
+    .card-container .overlay {
+        font-size: 20px; /* Disminuir tamaño de la fuente de la overlay */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 30px; /* Disminuir tamaño de la fuente */
+    }
+    .card {
+        padding: 30px; /* Disminuir padding */
+        width: 100%; /* Asegurar que el ancho sea 100% */
+    }
+    .card-container {
+        padding: 20px; /* Disminuir padding del contenedor de tarjetas */
+        margin-bottom: 50px; /* Disminuir margen inferior */
+    }
+    .card-container .overlay {
+        font-size: 15px; /* Disminuir tamaño de la fuente de la overlay */
+    }
+}
+
+/* -----------------------------comienzo footer-------------------------------------------- */
+
+.footer {
+    position: relative; /* Asegura que el overlay se posicione correctamente */
+    min-height: 400px; /* Ajusta la altura mínima del footer según sea necesario */
+    background-color: #ffe5e5; /* Color de fondo del footer */
+    overflow: hidden; /* Asegura que la ola no sobresalga del contenedor del footer */
+    margin-top: 0;
+}
+
+.footer .image-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+}
+
+.footer .about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.footer .footer-wave {
+    top: 0; /* Mueve la ola a la parte superior */
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.footer-overlay {
+    position: absolute;
+    bottom: 40px; /* Mueve el overlay hacia arriba para que no se superponga con la ola */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #BF7280;
+    padding: 40px;
+    border-radius: 15px;
+    opacity: 0.8;
+    color: white; /* Ajusta el color del texto según sea necesario */
+    text-align: center; /* Centra el texto dentro del overlay */
+}
+
+.footer-overlay h2 {
+    margin: 0;
+    font-size: 2.5em;
+    font-family: "Permanent Marker", cursive;
+}
+
+.footer-overlay h3 {
+    margin: 0;
+    font-size: 1.7em;
+    font-family:"Poetsen One", sans-serif;
+}
+
+/* Media queries para pantallas más pequeñas */
+
+@media (max-width: 1024px) {
+    .footer .image-container {
+        height: 400px; /* Disminuir altura de la imagen en pantallas medianas */
+    }
+
+    .footer-overlay {
+        padding: 15px;
+        bottom: 80px; /* Ajustar la posición del overlay */
+    }
+
+    .footer-overlay h2 {
+        font-size: 2em; /* Disminuir tamaño del texto */
+    }
+
+    .footer-overlay h3 {
+        font-size: 1.5em; /* Disminuir tamaño del texto */
+    }
+    .footer .footer-wave {
+        width: 150%;
+    }
+}
+
+@media (max-width: 820px) {
+    .footer .image-container {
+        height: 450px; /* Disminuir altura de la imagen en pantallas más pequeñas */
+    }
+
+    .footer-overlay {
+        padding: 20px;
+        bottom: 100px; /* Ajustar la posición del overlay */
+    }
+
+    .footer-overlay h2 {
+        font-size: 1.8em; /* Disminuir tamaño del texto */
+    }
+
+    .footer-overlay h3 {
+        font-size: 1.3em; /* Disminuir tamaño del texto */
+    }
+    .footer .footer-wave {
+        width: 200%;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer .image-container {
+        height: 400px; /* Disminuir altura de la imagen en pantallas muy pequeñas */
+    }
+
+    .footer-overlay {
+        padding: 15px;
+        bottom: 100px; /* Ajustar la posición del overlay */
+        width: 70%; /* Ajustar el ancho del overlay */
+    }
+
+    .footer-overlay h2 {
+        font-size: 1.5em; /* Disminuir tamaño del texto */
+    }
+
+    .footer-overlay h3 {
+        font-size: 1.2em; /* Disminuir tamaño del texto */
+    }
+    .footer .footer-wave {
+        width: 300%;
+    }
+}
+/* -------------------Agrega estilos básicos para el carrusel-------------------------- */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho del carrusel */
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+ /* ----------------------Agrega estilos básicos para la descripción -------------------------------------*/
+ .product-description {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.product-description h3{
+    font-size: 2.5em;
+    font-family: "Bebas Neue", sans-serif;
+}
+.product-description p{
+    font-size: 1.2em;
+    font-family: "Bebas Neue", sans-serif;
+}
+/* Media queries para pantallas más pequeñas */
+@media (max-width: 1024px) {
+    .product-description {
+        padding: 15px;
+    }
+
+    .product-description h3 {
+        font-size: 3em;
+    }
+
+    .product-description p {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 820px) {
+    .product-description {
+        padding: 10px;
+    }
+
+    .product-description h3 {
+        font-size: 3.5em;
+    }
+
+    .product-description p {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-description {
+        padding: 8px;
+    }
+
+    .product-description h3 {
+        font-size: 1.9em;
+    }
+
+    .product-description p {
+        font-size: 1.4em;
+    }
+}
+/* ---------------------Agrega estilos básicos para el botón comprar --------------------*/
+
+.buy-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #a35d6a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.buy-button:hover {
+    background-color: #c79ea5;
+}
+/* Media queries para hacer el botón responsive */
+
+@media (max-width: 1024px) {
+    .buy-button {
+        padding: 12px 25px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 820px) {
+    .buy-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buy-button {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+
+/*-------------------------------- Estilos para la sección de login ----------------------------------*/
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3d6d6;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.login-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 90%; /* Añadido para que se ajuste en pantallas pequeñas */
+    max-width: 500px; /* Limita el ancho máximo */
+}
+
+.login-container h2 {
+    color: #BF7280;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #565553;
+    font-size: 1.2em;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #a35d6a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.login-button:hover {
+    background-color: #c79ea5;
+}
+
+/* Media queries para hacer la sección de login responsive */
+
+@media (max-width: 1024px) {
+    .login-container {
+        padding: 30px;
+    }
+
+    .login-container h2 {
+        font-size: 2em;
+    }
+
+    .input-group label {
+        font-size: 1.1em;
+    }
+
+    .input-group input {
+        font-size: 0.9em;
+    }
+
+    .login-button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 820px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-container h2 {
+        font-size: 1.75em;
+    }
+
+    .input-group label {
+        font-size: 1em;
+    }
+
+    .input-group input {
+        font-size: 0.9em;
+    }
+
+    .login-button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container {
+        padding: 15px;
+    }
+
+    .login-container h2 {
+        font-size: 1.5em;
+    }
+
+    .input-group label {
+        font-size: 0.9em;
+    }
+
+    .input-group input {
+        font-size: 0.8em;
+    }
+
+    .login-button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* ---------------------------Estilos para la sección de agregar ropa -----------------------------------*/
+.add-item-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; 
+    background-color: #ffe5e5;
+    font-family: "Bebas Neue", sans-serif;
+    min-height: 100vh; /* Opcional: ajusta según sea necesario */
+}
+
+.add-item-container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 30px;
+    min-height: 300px; /* Ajusta este valor según el contenido */
+}
+.add-item-container h2 {
+    color: #BF7280;
+    font-size: 2em; 
+    margin-bottom: 15px; 
+    text-align: center;
+}
+
+.add-item-container p {
+    font-size: 1em; 
+    color: #565553;
+    margin-bottom: 20px; 
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px; 
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #565553;
+    font-size: 1em; 
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px; 
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.submit-button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px; 
+    font-size: 1em; 
+    color: #fff;
+    background-color: #a35d6a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.submit-button:hover {
+    background-color: #c79ea5;
+}
+/* Media queries para hacer la sección de agregar ropa responsive */
+
+@media (max-width: 1024px) {
+    .add-item-section {
+        padding: 60px 15px; 
+    }
+
+    .add-item-container {
+        padding: 25px;
+    }
+
+    .add-item-container h2 {
+        font-size: 1.75em;
+    }
+
+    .add-item-container p {
+        font-size: 0.9em;
+    }
+
+    .input-group label {
+        font-size: 0.9em;
+    }
+
+    .input-group input {
+        padding: 7px;
+    }
+
+    .submit-button {
+        padding: 12px; 
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 820px) {
+    .add-item-section {
+        padding: 80px 90px; 
+    }
+
+    .add-item-container {
+        padding: 20px;
+    }
+
+    .add-item-container h2 {
+        font-size: 1.5em;
+    }
+
+    .add-item-container p {
+        font-size: 0.8em;
+    }
+
+    .input-group label {
+        font-size: 0.8em;
+    }
+
+    .input-group input {
+        padding: 6px;
+    }
+
+    .submit-button {
+        padding: 10px;
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .add-item-section {
+        padding: 60px 60px; 
+    }
+
+    .add-item-container {
+        padding: 15px;
+    }
+
+    .add-item-container h2 {
+        font-size: 1.25em;
+    }
+
+    .add-item-container p {
+        font-size: 0.7em;
+    }
+
+    .input-group label {
+        font-size: 0.7em;
+    }
+
+    .input-group input {
+        padding: 5px;
+    }
+
+    .submit-button {
+        padding: 8px;
+        font-size: 0.7em;
+    }
+}
+/* -------------------------estilos para menu listar ropa ------------------------------------- */
+.table-container {
+    background-color: #f3d6d6;
+    padding: 30px 30px; /* Ajusta el padding para dispositivos pequeños */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+    margin-top: 90px;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+}
+
+.table-container .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Espacio entre los botones */
+    margin-bottom: 20px; /* Espacio debajo de los botones */
+    justify-content: center; /* Centra los botones */
+}
+
+/* Estilo para la tabla */
+.styled-table {
+    border-collapse: collapse;
+    width: 100%; /* Asegura que la tabla ocupe el ancho completo */
+    font-size: 18px;
+    text-align: left;
+    margin-top: 20px;
+    overflow-x: auto; /* Permite el desplazamiento horizontal */
+    white-space: nowrap; /* Evita que las celdas se ajusten automáticamente */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    border: 2px solid #d76767;
+    text-align: center;
+    white-space: nowrap; /* Evita que las celdas se ajusten automáticamente */
+}
+
+.styled-table a {
+    text-decoration: none;
+    color: #4d4848;
+    font-weight: bold;
+}
+
+.styled-table a:hover {
+    color: #d76767;
+}
+
+.styled-table thead tr {
+    background-color: #d76767;
+    color: #ffffff;
+    text-align: left;
+}
+
+.styled-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #d76767;
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+    color: #d76767;
+}
+
+.styled-table img {
+    border-radius: 4px;
+    border: 2px solid #d76767;
+}
+
+.table-container h2 {
+    color: #BF7280;
+    display: block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 50px;
+    font-weight: 1000;
+    line-height: 1;
+    margin-block-start: 1em;
+}
+
+.table-container p {
+    color: #BF7280;
+    display: block;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 30px;
+    font-weight: 1000;
+    line-height: 1;
+    margin-block-start: 0.5em;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 1024px) {
+    .table-container {
+        padding: 20px; /* Ajusta el padding para pantallas más pequeñas */
+        margin-top: 60px; /* Reduce el margen superior si es necesario */
+    }
+
+    .table-container .button-container {
+        flex-direction: row; /* Coloca los botones en columna para dispositivos más pequeños */
+        align-items: center; /* Centra los botones horizontalmente */
+    }
+
+    .styled-table {
+        font-size: 16px; /* Ajusta el tamaño de la fuente de la tabla */
+        overflow-x: auto; /* Asegura que la tabla pueda desplazarse horizontalmente si es necesario */
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 10px 8px; /* Ajusta el padding en las celdas */
+    }
+
+    .table-container h2 {
+        font-size: 40px; /* Ajusta el tamaño de la fuente del título */
+    }
+
+    .table-container p {
+        font-size: 24px; /* Ajusta el tamaño del párrafo */
+    }
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        padding: 20px; /* Reduce el padding en pantallas aún más pequeñas */
+    }
+
+    .table-container .button-container {
+        flex-direction: row; /* Asegura que los botones estén en columna */
+    }
+
+    .styled-table {
+        font-size: 14px; /* Ajusta el tamaño de la fuente de la tabla */
+        overflow-x: auto;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 8px 6px; /* Ajusta el padding en las celdas */
+    }
+
+    .table-container h2 {
+        font-size: 30px; /* Ajusta el tamaño del título */
+    }
+
+    .table-container p {
+        font-size: 20px; /* Ajusta el tamaño del párrafo */
+    }
+}
+
+/* Media Queries para dispositivos móviles menores a 540px */
+@media (max-width: 540px) {
+    .table-container {
+        padding: 10px; /* Reduce el padding para dispositivos muy pequeños */
+        margin-top: 90px; /* Ajusta el margen superior */
+    }
+
+    .table-container .button-container {
+        flex-direction: row; /* Asegura que los botones estén en columna */
+    }
+
+    .table-container h2 {
+        font-size: 20px; /* Ajusta el tamaño del título */
+    }
+
+    .table-container p {
+        font-size: 16px; /* Ajusta el tamaño del párrafo */
+    }
+
+    .styled-table {
+        font-size: 10px; /* Ajusta el tamaño de la fuente de la tabla */
+        overflow-x: auto;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        padding: 4px 2px; /* Ajusta el padding en las celdas */
+    }
+
+    .styled-table th:nth-child(n+3), /* Oculta columnas no esenciales */
+    .styled-table td:nth-child(n+3) {
+        display: table-cell; /* Muestra todas las columnas */
+    }
+}

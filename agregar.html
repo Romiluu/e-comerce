@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Potrero</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>ShopStore</h1>
+        <input type="checkbox" id="menu-btn" class="menu-btn">
+        <label for="menu-btn" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-links">
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="listar.php">Listar</a></li>
+                <li><a href="login.html">Login adm</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="add-item-section">
+        <div class="add-item-container">
+            <h2>Agregar ropa</h2>
+            <p>Ingrese los datos de la prenda.</p>
+
+            <form method="POST" action="agregar.php" enctype="multipart/form-data">
+                <div class="input-group">
+                    <label for="prenda">Tipo de prenda</label>
+                    <input type="text" id="prenda" name="prenda" placeholder="Prenda" required>
+                </div>
+                <div class="input-group">
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" name="marca" placeholder="Marca" required>
+                </div>
+                <div class="input-group">
+                    <label for="talle">Talle</label>
+                    <input type="text" id="talle" name="talle" placeholder="Talle" required>
+                </div>
+                <div class="input-group">
+                    <label for="precio">Precio</label>
+                    <input type="text" id="precio" name="precio" placeholder="Precio" required>
+                </div>
+                <div class="input-group">
+                    <label for="descripcion">Descripcion</label>
+                    <input type="text" id="descripcion" name="descripcion" placeholder="Descripcion" required>
+                </div>
+                <div class="input-group">
+                    <label for="pago">Link de pago</label>
+                    <input type="text" id="pago" name="pago" placeholder="Pago" required>
+                </div>
+                <div class="input-group">
+                    <label for="imagen">Imagen 1</label>
+                    <input type="file" id="imagen1" name="imagen1" placeholder="Imagen 1">
+                </div>
+                <div class="input-group">
+                    <label for="imagen">Imagen 2</label>
+                    <input type="file" id="imagen2" name="imagen2" placeholder="Imagen 2">
+                </div>
+                <div class="input-group">
+                    <label for="imagen">Imagen 3</label>
+                    <input type="file" id="imagen3" name="imagen3" placeholder="Imagen 3">
+                </div>
+                <button type="submit" class="submit-button">Ingresar</button>
+            </form>
+        </div>
+    </section>
+</body>
+</html>
